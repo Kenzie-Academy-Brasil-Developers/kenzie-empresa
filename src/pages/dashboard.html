@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/styles/reset.css" />
+    <link rel="stylesheet" href="/src/styles/global.css" />
+    <link rel="stylesheet" href="/src/styles/dashboard.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+      defer
+    ></script>
+    <script type="module" src="/src/scripts/dashboard.js"></script>
+    <title>Página do Administrador</title>
+  </head>
+  <body>
+    <nav>
+      <img src="/src/asserts/img/kenzieLogo.png" alt="logo" />
+      <button class="logout">Logout</button>
+    </nav>
+    <main>
+      <section class="allDepartments">
+        <div class="divNavCreateDepartment">
+          <h2>Departamentos</h2>
+          <select class="selectDepartments">
+            <option value="selectEnterprise">Selecionar Empresa</option>
+          </select>
+          <div class="divCreateButton">
+            <button id="btnCreateDepartProfile">Criar</button>
+
+          </div>
+
+
+        </div>
+        <ul class="ulAllDepartments"></ul>
+      </section>
+
+      <dialog class="modalContainerCreate">
+        <form class="dialogCreateDepartment">
+            <h1>Criar Departamento</h1>
+            <button type="submit" id="closeModalCreateDepartment"></button>
+            
+            <input type="text" name="name" id="create" placeholder="Nome do departamento">
+            <input type="text" name="description" id="description" placeholder="Descrição">
+           
+            <select class="selectModalDepartments">
+                <option value="selectEnterprise">Selecionar Empresa</option>
+            </select>            
+            <div>
+                <button id="btnCreateDepartment">Criar o departamento</button>
+            </div>
+        </form>
+      </dialog>
+
+      <dialog class="modalContainerTrash">
+        <form class="formDeleteModal">
+          <section class="deleteNav">
+            <h1>Realmenta deseja deletar o departamento e demitir seus funcionários?</h1>
+            <button class="closeModalDeleteDepartment"></button>
+          </section>
+          </form>
+      </dialog>
+
+<dialog class="modalContainerEdit">
+  <form class="formEditModal">
+    <section>
+      <h1>Editar Departamento</h1>
+    <button class="closeModalEditDepartment"></button>
+  </section>
+  <input class="inputEdit"type="text" name="description">  
+  </form>
+</dialog>
+      
+    </main>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/styles/reset.css">
+    <link rel="stylesheet" href="/src/styles/global.css">
+    <link rel="stylesheet" href="/src/styles/cadastro.css">    
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js" defer></script>
+        <script type="module" src="/src/scripts/cadastro.js" defer></script>
+
+    <title>Página de Cadastro</title>
+  </head>
+  <body>
+    <nav>
+      <img src="/src/asserts/img/kenzieLogo.png" alt="Logo" />
+      <div>
+        <button class="btnPagHome">Home</button>
+        <button class="btnPagLogin">Login</button>
+      </div>
+    </nav>
+
+    <main>
+      <div class="container__cadastro">
+
+        <h1>Cadastre-se</h1>
+        <input type="text" placeholder="Seu nome" name="username" id="username"/>
+        <input type="text" placeholder="Seu e-mail" name="email" id="email"/>
+        <input type="text" placeholder="Sua senha" name="password" id="password" />
+        <button class="buttonCadastro" id="pag__cadastro-btnCadastro">Cadastre-se</button>
+      <button id="btnReturnLogin" class="btnPagLogin">Retornar</button>
+      </div>
+      
+    </main>
+  </body>
+</html>

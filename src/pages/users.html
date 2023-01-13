@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="/styles/users.css"> -->
+    <link rel="stylesheet" href="/src/styles/reset.css" />
+    <link rel="stylesheet" href="/src/styles/global.css" />
+    <link rel="stylesheet" href="/src/styles/user.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+      defer
+    ></script>
+    <script type="module" src="/src/scripts/user.js" defer></script>
+    <title>Página no Usuário</title>
+  </head>
+  <body>
+    <nav>
+      <img src="/src/asserts/img/kenzieLogo.png" alt="logo" />
+      <button class="logout">Logout</button>
+    </nav>
+
+    <main>
+      <section class="usuario__editar">
+        <div class="modailityJob"></div>
+
+        <button id="btnModalEdit"></button>
+      </section>
+
+      <section class="informationCoWorkes">
+        
+      </section>
+    </main>
+
+    <dialog>
+      <form class="editLogin">
+        <div class="navModal">
+          <h2>Editar Perfil</h2>
+
+          <button type="submit" id="closeModal"></button>
+        </div>
+        <input type="text" placeholder="Seu nome" name="name" id="name" />
+        <input type="text" placeholder="Seu e-mail" name="email" id="email" />
+        <input type="text" placeholder="Sua senha" name="password" id="password" />
+
+        <div>
+          <button id="btn-editar-perfil">Editar Perfil</button>
+        </div>
+      </form>
+    </dialog>
+  </body>
+</html>

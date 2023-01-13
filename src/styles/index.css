@@ -1,0 +1,154 @@
+.indexImg {
+  display: none;
+}
+
+select {
+  display: flex;
+  text-align: center;
+  width: 350px;
+  max-width: 100%;
+  height: 53px;
+  background-color: var(--color-brand-1);
+  color: var(--color-brand-2);
+  font-size: 18px;
+  margin: 0 auto;
+}
+
+ul {
+  margin-top: 10px;
+  display: flex;
+  width: 100%;
+  max-width: 100%;
+  flex-direction: row;
+  overflow-x: auto;
+  gap: 20px;
+}
+
+li {
+  max-width: 100%;
+  display: flex;
+  width: 241px;
+  height: 211px;
+  flex-direction: column;
+  border-bottom: 1px solid var(--color-brand-1);
+}
+
+.companieName {
+  width: 241px;
+  max-width: 100%;
+  height: 27px;
+  font-size: 20px;
+  font-weight: 700;
+  padding-left: 15px;
+  padding-top: 13px;
+}
+
+.companieHours {
+  max-width: 100%;
+  margin-top: 114px;
+  padding-left: 15px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.companieSectorDescription {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  margin-top: 10px;
+  border: 1px solid var(--color-brand-1);
+  color: var(--color-brand-1);
+  font-size: 16px;
+  width: 100px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 255px;
+  margin-left: 35px;
+}
+
+@media (min-width: 700px) {
+  .indexImg {
+    display: flex;
+    width: 550px;
+    height: 743px;
+    max-width: 100%;
+  }
+
+  main {
+    display: flex;
+    justify-content: space-between;
+    width: 1150px;
+    max-width: 100%;
+    height: 800px;
+    max-height: 100%;
+    padding: 30px 168px;
+    gap: 60px;
+  }
+
+  ul {
+    width: 550px;
+    height: 691px;
+    flex-wrap: wrap;
+    margin-top: 0;
+    max-width: 100%;
+  }
+
+  li {
+    max-width: 100%;
+    width: 489px;
+    height: 135px;
+  }
+  .companieName {
+    width: 300px;
+    height: 27px;
+    max-width: 100%;
+  }
+
+  .companieHours {
+    width: 100px;
+    height: 28px;
+    margin-top: 10px;
+    max-width: 100%;
+  }
+  select {
+    width: 550px;
+    max-width: 100%;
+    height: 53px;
+    cursor: pointer;
+  }
+
+  select:hover {
+    background-color: var(--color-hover-1);
+  }
+
+  .btnPagLogin {
+    background-color: var(--color-brand-2);
+    width: 142px;
+    height: 48px;
+    color: var(--color-brand-1);
+    border: 1px solid var(--color-brand-1);
+    cursor: pointer;
+    max-width: 100%;
+  }
+
+  .btnPagLogin:hover {
+    background-color: var(--color-hover-2);
+    border: var(--color-hover-2);
+  }
+
+  .btnPagCadastro {
+    background-color: var(--color-brand-1);
+    color: var(--color-brand-2);
+    width: 142px;
+    height: 48px;
+    border: 1px solid var(--color-brand-1);
+    cursor: pointer;
+    max-width: 100%;
+  }
+
+  .btnPagCadastro:hover {
+    background-color: var(--color-hover-1);
+    border: var(--color-hover-1);
+  }
+}

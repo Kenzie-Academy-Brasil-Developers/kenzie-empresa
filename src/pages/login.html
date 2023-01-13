@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/styles/reset.css" />
+    <link rel="stylesheet" href="/src/styles/global.css" />
+    <link rel="stylesheet" href="/src/styles/login.css" />
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js" defer></script>
+    <script type="module" src="/src/scripts/login.js"></script>
+
+    <title>Página de Login</title>
+  </head>
+  <body>
+    <nav>
+      <img src="/src/asserts/img/kenzieLogo.png" alt="" />
+      <div>
+        <button class="btnPagHome">Home</button>
+        <button class="btnPagCadastro btnNavCadastro">Cadastro</button>
+      </div>
+    </nav>
+
+    <main class="pag__login">
+      <div class="container__login login">
+        <h1>Login</h1>
+        <p>Preencha os campos para realizar o login</p>
+        <input type="text" placeholder="Seu e-mail" name="email" id="email" />
+        <input
+          type="password"
+          placeholder="Sua senha"
+          name="password"
+          id="password"
+        />
+        <button id="btnAcessLogin">Login</button>
+        <p>ou</p>
+
+        <button  class="btnPagCadastro buttonCadastro">Cadastre-se</button>
+      </div>
+    </main>
+  </body>
+</html>

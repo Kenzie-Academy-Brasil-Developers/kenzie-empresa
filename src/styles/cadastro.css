@@ -1,0 +1,105 @@
+
+main{    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1200px;
+    height: 612px;
+    background-image: url(/src/asserts/img/fotoCadastro.png);
+    background-size: 900px;
+    background-repeat: no-repeat;
+    max-width: 100%;
+}
+
+
+
+.container__cadastro{
+    display: flex;
+    flex-direction: column;    
+    background-color: var(--color-gray-2);
+    width: 358px;
+    height: 519px;
+    max-width: 100%;
+
+}
+
+h1{
+    width: 236px;
+    height: 48px;
+    font-size: 32px;
+    font-weight: 700;
+    margin-left: 22px;
+    margin-top: 40px;
+    margin-bottom: 25px;
+    max-width: 100%;
+}
+
+input{
+    background-color: var(--color-brand-2);
+    border: var(--color-border-1);
+    width: 324px;
+    height: 52px;
+    max-width: 100%;
+    margin: 0 auto;
+    margin-bottom: 15px;
+}
+
+.buttonCadastro{
+    width: 324px;
+    height: 48px;
+    background-color: var(--color-brand-1);
+    margin: 0 auto;
+    color: var(--color-brand-2);
+    border: 1px solid var(--color-brand-1);
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+#btnReturnLogin{
+    width: 324px;
+    height: 48px;
+    background-color: var(--color-brand-2);
+    border: 1px solid var(--color-brand-1);
+    color: var(--color-brand-1);
+    margin: 0 auto;
+    font-size: 18px;
+
+
+}
+
+
+
+@media (min-width: 700px){
+    main{
+        width: 100%;
+        max-width: 100%;
+        background-size: 100%;
+    }
+    .btnPagLogin {
+        background-color: var(--color-brand-1);
+        width: 142px;
+        height: 48px;
+        color: var(--color-brand-2);
+        border: 1px solid var(--color-brand-2);
+        cursor: pointer;
+        max-width: 100%;
+      }
+      .btnPagLogin:hover {
+        background-color: var(--color-hover-1);
+        border: var(--color-hover-1);
+      }
+
+      .btnPagHome {
+        background-color: var(--color-brand-2);
+        width: 142px;
+        height: 48px;
+        color: var(--color-brand-1);
+        border: 1px solid var(--color-brand-1);
+        cursor: pointer;
+        max-width: 100%;
+      }
+    
+      .btnPagHome:hover {
+        background-color: var(--color-hover-2);
+      }
+}

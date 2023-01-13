@@ -1,0 +1,326 @@
+.btnReadInformation {
+  background-image: url("/src/asserts/img/readInformationDASHBOARD.png");
+  border: none;
+  background-color: var(--color-brand-2);
+  cursor: pointer;
+  background-size: 100%;
+  width: 27px;
+  height: 27px;
+  background-repeat: no-repeat;
+  background-position: center;
+  max-width: 100%;
+}
+
+.btnEditInformation {
+  background-image: url("/src/asserts/img/lapisEdit.png");
+  border: none;
+  background-color: var(--color-brand-2);
+  cursor: pointer;
+  background-size: 100%;
+  width: 27px;
+  height: 27px;
+  background-repeat: no-repeat;
+  background-position: center;
+  max-width: 100%;
+}
+
+.btnTrashDelete {
+  background-image: url("/src/asserts/img/deleteTrashDashboard.png");
+  border: none;
+  background-color: var(--color-brand-2);
+  cursor: pointer;
+  background-size: 100%;
+  width: 27px;
+  height: 27px;
+  background-repeat: no-repeat;
+  background-position: center;
+  max-width: 100%;
+}
+
+.logout {
+  background-color: var(--color-brand-2);
+  width: 142px;
+  height: 48px;
+  color: var(--color-brand-1);
+  border: 1px solid var(--color-brand-1);
+  cursor: pointer;
+  max-width: 100%;
+}
+
+.logout:hover {
+  background-color: var(--color-hover-2);
+}
+
+.divNavCreateDepartment > h2 {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.selectDepartments {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  width: 282px;
+  height: 38px;
+  border: 1px solid black;
+  border-radius: 15px;
+}
+
+.divNavCreateDepartment {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+#btnCreateDepartProfile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: transparent;
+  border: 1px solid var(--color-brand-1);
+  color: var(--color-brand-2);
+  width: 150px;
+  max-width: 100%;
+  height: 48px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  z-index: 0;
+}
+
+#btnCreateDepartProfile:hover {
+  background-color: var(--color-hover-1);
+  border: 1px solid var(--color-hover-1);
+  background-image: url(/src/asserts/img/PlusCreateBtnDASHBOARD.png);
+  background-size: 28px;
+  background-repeat: no-repeat;
+  background-position: 16%;
+}
+
+.divCreateButton {
+  background-color: var(--color-brand-1);
+  z-index: 0;
+  background-image: url(/src/asserts/img/PlusCreateBtnDASHBOARD.png);
+  background-size: 28px;
+  background-repeat: no-repeat;
+  background-position: 16%;
+}
+
+.dialogCreateDepartment {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.dialogCreateDepartment > input {
+  width: 422px;
+  max-width: 100%;
+  height: 52px;
+}
+
+.dialogCreateDepartment > select {
+  width: 422px;
+  max-width: 100%;
+  height: 52px;
+  cursor: pointer;
+}
+
+.modalContainerCreate {
+  width: 506px;
+  height: 402px;
+}
+.dialogCreateDepartment > h1 {
+  width: 375px;
+  height: 54px;
+  margin-left: 43px;
+  margin-top: 39px;
+}
+
+#btnCreateDepartment {
+  width: 422px;
+  height: 48px;
+  background-color: var(--color-brand-1);
+  color: var(--color-brand-2);
+  border: 1px solid var(--color-brand-1);
+  cursor: pointer;
+}
+
+#btnCreateDepartment:hover {
+  background-color: var(--color-hover-1);
+  border: 1px solid var(--color-hover-1);
+}
+
+#closeModalCreateDepartment {
+  margin-top: 15px;
+  margin-right: 18px;
+}
+
+.ulAllDepartments {
+  display: flex;
+  width: 1182px;
+  max-width: 100%;
+  height: 385px;
+  flex-wrap: wrap;
+  gap: 50px;
+  margin: 0 auto;
+  margin-top: 34px;
+  overflow: auto;
+}
+
+.departmentCardDashboard {
+  border-bottom: 2px solid var(--color-brand-1);
+  width: 489px;
+  height: 170px;
+}
+
+.liDepartmentsDashboard {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 29px;
+  line-height: 25px;
+}
+
+.allBtnCardDepartments {
+  margin: 0 auto;
+  margin-top: 22px;
+}
+
+#closeModalCreateDepartment {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-image: url(/src/asserts/img/closemodalUser.png);
+  border: none;
+  background-color: var(--color-brand-2);
+  cursor: pointer;
+  background-size: 100%;
+  width: 18px;
+  height: 18px;
+  background-repeat: no-repeat;
+  background-position: center;
+  max-width: 100%;
+}
+
+
+.formDeleteModal{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 733px;
+    height: 342px;
+}
+
+.formDeleteModal > section{
+    margin-top: 70px;
+    margin-bottom: 38px;
+    width: 598px;
+    height: 120px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+.closeModalDeleteDepartment{
+    position: absolute;
+  right: 0;
+  top: 0;
+  background-image: url(/src/asserts/img/closemodalUser.png);
+  border: none;
+  background-color: var(--color-brand-2);
+  cursor: pointer;
+  background-size: 100%;
+  width: 18px;
+  height: 18px;
+  background-repeat: no-repeat;
+  background-position: center;
+  max-width: 100%;
+
+}
+
+.formDeleteModal > h1{   
+   
+    
+    font-size: 28px;
+    line-height: 42px;
+    font-weight: 700;
+}
+
+.confirmeDelete{
+    font-size: 18px;
+    background-color: var(--color-brand-4);
+    width: 422px;
+    height: 48px;
+    color: var(--color-brand-2);
+    border: 1px solid var(--color-brand-4);
+    cursor: pointer;
+}
+
+.confirmeDelete:hover{
+    background-color: var(--color-hover-3);
+    border: 1px solid var(--color-hover-3);
+}
+
+
+.modalContainerEdit{
+  width: 506px;
+  height: 330px;
+}
+
+.formEditModal{
+  position: relative;  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.formEditModal > section > h1{
+  font-size: 36px;
+  font-weight: 700;
+  width: 375px;
+  height: 54px;
+  margin-left: 43px;
+  margin-top: 39px;
+
+}
+
+.closeModalEditDepartment{
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-image: url(/src/asserts/img/closemodalUser.png);
+  border: none;
+  background-color: var(--color-brand-2);
+  cursor: pointer;
+  background-size: 100%;
+  width: 18px;
+  height: 18px;
+  background-repeat: no-repeat;
+  background-position: center;
+  max-width: 100%;
+}
+
+.inputEdit{
+  margin-top: 20px;
+  margin-bottom: 14px;
+  font-size: 17px;
+  width: 422px;
+  height: 113px;
+}
+
+.confirmEdit{
+  width: 422px;
+  height: 48px;
+  background-color: var(--color-brand-1);
+  border: var(--color-brand-1);
+  color: var(--color-brand-2);
+  font-size: 18px;
+  font-weight: 700;
+}
