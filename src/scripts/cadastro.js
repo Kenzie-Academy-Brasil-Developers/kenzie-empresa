@@ -1,11 +1,14 @@
-import { getUser, login, createUser,} from "./request.js";
-
+import { getUser, login, createUser, validateProfile,} from "./request.js";
+import{toast} from './toast.js'
 async function renderDash() {
   const user = await getUser();
+  const validate = await validateProfile()
  
-  if (user) {
-    window.location.replace("/src/pages/login.html");
-  } 
+  if (user && validate.is_admin) {
+    window.location.replace("/src/pages/dashboard.html");
+  } else if(user && !validate.is_admin){
+    window.location.replace('/src/pages/users.html')
+  }
 }
 
 
@@ -29,31 +32,32 @@ function redirectToLoginPag() {
 }
 
 export async function createUserForm() {
-  const inputs = document.querySelectorAll("input");
-  const button = document.getElementById("pag__cadastro-btnCadastro");
-
+  const inputs = document.querySelectorAll("input");  
   const newUser = {};
-
-  button.addEventListener("click", async (event) => {
-    event.preventDefault();
-    inputs.forEach((input) => {
-      newUser[input.id] = input.value;
-    });
-
-    const request = await createUser(newUser);
-    localStorage.setItem("@kenzieEmpresa:user", JSON.stringify(request));
-
-    
-   
-                
-  });
-  return newUser
- 
+  
+  inputs.forEach(input =>{
+    newUser[input.name] = input.value
+  })
+  
+  
+  
+  return await createUser(newUser)
+  
 }
 
+const button = document.getElementById("pag__cadastro-btnCadastro");
+button.addEventListener("click", async (event) => {
+  event.preventDefault(); 
+  createUserForm();
+  
+  
+  
+
+ 
+              
+});
 
 
 redirectToHomePag();
 redirectToLoginPag();
-createUserForm();
 renderDash()

@@ -40,7 +40,26 @@
 
         </div>
         <ul class="ulAllDepartments"></ul>
+
+
       </section>
+
+
+
+      <section class="allUsers">
+        <div class="divNavCreateUser">
+          <h2>Usuários cadastrados</h2>         
+
+        </div>        
+       <ul class="allUsersDashboard"></ul>
+      </section>
+
+
+    </main>
+
+
+
+    <!-- MODAL DO DEPARTAMENTO -->
 
       <dialog class="modalContainerCreate">
         <form class="dialogCreateDepartment">
@@ -77,7 +96,81 @@
   <input class="inputEdit"type="text" name="description">  
   </form>
 </dialog>
+
+
+<!-- view Department -->
+<dialog class="dialogViewDepartment">
+<form class="formViewDepartment">
+  <section class="formNav">
+    <button class="closeModalViewDepartment"></button>
+    <div class="divViewInfo">
+
+      <!-- descrição do departamento -->
+      <select class="selectViewDepartment">
+        <option>Selecionar Usuário</option>
+      </select>
+    </div>
+
+    
+  </section>
+  <ul class="userOff"></ul>
+</form>
+
+
+</dialog>
+
+
+
+
+
+<!-- MODAL USUÁRIO -->
+
+<dialog class="modalContainerUsersEdit">
+  <form class="formUsersEdit">
+    <div class="modalNavUserEdit">
+      <h1>Editar Usuário</h1>
+      <button class="closeModalEditUser"></button>
+
+    </div>
+
+    <select name="kind_of_work" id="kind_of_work">
+      <option>Selecionar modalidade de trabalho</option>
+      <option>home office</option>
+      <option>presencial</option>
+      <option>hibrido</option>
+    </select>
+
+    <select name="professional_level" id="professional_level">
+      <option>Selecionar nivel profissional</option>
+      <option>estágio</option>
+      <option>júnior</option>
+      <option>pleno</option>
+      <option>sênior</option>
       
-    </main>
+    </select>
+
+
+
+
+  </form>
+
+</dialog>
+
+
+
+<!-- Modal Delete Usuário -->
+
+<dialog class="userDeleteModal">
+  <form class="formModalDeleteUser">
+    <button class="closeModalDeleteUser"></button>
+    
+
+  </form>
+
+</dialog>
+
+
+
+      
   </body>
 </html>

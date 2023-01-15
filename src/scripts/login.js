@@ -3,10 +3,11 @@ import { getUser, login, createUser, validateProfile} from "/src/scripts/request
 
 async function renderLogin() {
   const user = getUser();
+  console.log(user)
   const validate = validateProfile() 
-    if (user && validate.is_admin) {
+    if (user !== null && validate.is_admin) {
     window.location.replace('/src/pages/dashboard.html')
-  } else if(user && !validate.is_admin){
+  } else if(user !== null && !validate.is_admin){
     window.location.replace('/src/pages/users.html')
   }
 }

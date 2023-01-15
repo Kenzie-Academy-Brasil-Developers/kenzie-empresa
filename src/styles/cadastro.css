@@ -53,7 +53,9 @@ input{
     border: 1px solid var(--color-brand-1);
     margin-bottom: 15px;
     font-size: 18px;
+    cursor: pointer;
 }
+
 
 #btnReturnLogin{
     width: 324px;
@@ -84,10 +86,20 @@ input{
         cursor: pointer;
         max-width: 100%;
       }
+     
       .btnPagLogin:hover {
         background-color: var(--color-hover-1);
         border: var(--color-hover-1);
       }
+
+      #btnReturnLogin:hover{
+        background-color: var(--color-hover-2);
+      }
+
+      .buttonCadastro:hover{
+        background-color: var(--color-hover-1);
+        border: var(--color-hover-1);
+    }
 
       .btnPagHome {
         background-color: var(--color-brand-2);

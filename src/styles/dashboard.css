@@ -143,6 +143,8 @@
 }
 
 #btnCreateDepartment {
+  font-size: 18px;
+  font-weight: 700;
   width: 422px;
   height: 48px;
   background-color: var(--color-brand-1);
@@ -244,9 +246,7 @@
 
 }
 
-.formDeleteModal > h1{   
-   
-    
+.formDeleteModal > h1{       
     font-size: 28px;
     line-height: 42px;
     font-weight: 700;
@@ -323,4 +323,341 @@
   color: var(--color-brand-2);
   font-size: 18px;
   font-weight: 700;
+  cursor: pointer;
+}
+
+.confirmEdit:hover{
+  background-color: var(--color-hover-1);
+  border: 1px solid var(--color-hover-1);
+}
+
+
+/* visualizar Empresas */
+
+.dialogViewDepartment{
+  position: relative;
+  width: 857px;
+  height: 637px;
+}
+
+.closeModalViewDepartment{
+  position: absolute;
+  right: 25px;
+  top: 15px;
+  background-image: url(/src/asserts/img/closemodalUser.png);
+  border: none;
+  background-color: var(--color-brand-2);
+  cursor: pointer;
+  background-size: 100%;
+  width: 18px;
+  height: 18px;
+  background-repeat: no-repeat;
+  background-position: center;
+  max-width: 100%;
+}
+
+.formNav{
+  display: flex;
+  gap: 64px;
+  margin-top: 30px;
+}
+
+.divViewInfo{
+  display: flex;
+  flex-direction: column;
+  width: 422px;
+}
+
+.divViewInfo > select{
+  height: 52px;
+  font-size: 18px;
+  font-weight: 700;
+
+}
+
+.divViewInfo > button{
+  width: 157px;
+  height: 48px;
+  background-color: var(--color-brand-4);
+  border: 1px solid var(--color-brand-4);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-brand-2);
+margin-top: 15px;
+cursor: pointer;
+}
+
+.divViewInfo > button:hover{
+  background-color: var(--color-hover-3);
+  border: 1px solid var(--color-hover-3);
+}
+
+.navCompanieInfo{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.userOff{
+  
+  display: flex;
+  gap: 30px;
+  width: 814px;
+  height: 290px;
+  overflow: auto;
+  background-color: var(--color-gray-3);
+  border: 1px solid var(--color-gray-4);
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.userOff > li{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  gap: 5px;
+  width: 306px;
+  height: 196px;
+  background-color: var(--color-brand-2);
+  padding: 15px 30px;
+}
+
+.userOff > li > button{
+  position: absolute;
+  cursor: pointer;
+  bottom: 30px;
+  right: 65px;
+  background-color: transparent;
+  border: 1px solid #CE4646;
+  color: #CE4646;
+  width: 157px;
+  height: 48px;
+  font-size: 18px;
+
+}
+
+.userOff > li > button:hover{
+  background-color: #f0ecec;
+}
+
+
+
+
+
+
+/* usuarios */
+/* 1- Editar usuários */
+
+.liUserEdit{
+  width: 489px;
+  height: 196px;
+  border-bottom: 1px solid var(--color-brand-1);
+  display: flex;
+  flex-direction: column;
+  padding: 10px 29px;
+  line-height: 25px;
+}
+
+.btnUserEdit {
+  background-image: url("/src/asserts/img/lapisEdit.png");
+  border: none;
+  background-color: var(--color-brand-2);
+  cursor: pointer;
+  background-size: 100%;
+  width: 27px;
+  height: 27px;
+  background-repeat: no-repeat;
+  background-position: center;
+  max-width: 100%;
+}
+
+
+.btnDeleteUser{
+  background-image: url("/src/asserts/img/deleteTrashDashboard.png");
+  border: none;
+  background-color: var(--color-brand-2);
+  cursor: pointer;
+  background-size: 100%;
+  width: 27px;
+  height: 27px;
+  background-repeat: no-repeat;
+  background-position: center;
+  max-width: 100%;
+}
+
+.divNavEditUser{
+  display: flex;
+  flex-direction: column;
+}
+
+
+.divButtonsEditUser{
+  display: flex;
+  gap: 20px;
+  margin: 0 auto;
+  margin-top: 28px;
+}
+
+.allUsersDashboard{
+  display: flex;
+  width: 1182px;
+  max-width: 100%;
+  height: 385px;
+  flex-wrap: wrap;
+  gap: 50px;
+  margin: 0 auto;
+  margin-top: 34px;
+  overflow: auto;
+
+}
+
+.divNavCreateUser > h2{
+  font-size: 30px;
+  font-weight: 700;
+
+}
+
+.divNavCreateUser{
+  display: flex;
+ margin: 0 auto;
+  justify-content: center;
+  width: 1182px;
+  max-width: 100%;
+  margin-bottom: 100px;
+  margin-top: 40px;
+
+}
+
+
+
+
+.modalContainerUsersEdit{
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 13px;
+  width: 506px;
+  max-width: 100%;
+  height: 342px;
+
+
+}
+
+.formUsersEdit{
+  position: relative;
+ display: flex;
+ flex-direction: column;
+ width: 423px;
+ max-width: 100%;
+ height: 253px;
+ gap: 30px
+
+}
+
+.formUsersEdit > select{
+  display: flex;
+  flex-direction: column;
+  width: 422px;
+  max-width: 100%;
+  height: 52px;
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: 700;
+
+}
+
+
+.closeModalEditUser{
+  position: absolute;
+  right: -30px;
+  top: 0;
+  background-image: url(/src/asserts/img/closemodalUser.png);
+  border: none;
+  background-color: var(--color-brand-2);
+  cursor: pointer;
+  background-size: 100%;
+  width: 18px;
+  height: 18px;
+  background-repeat: no-repeat;
+  background-position: center;
+  max-width: 100%;
+
+}
+
+.btnEditUserConfirm{
+  width: 422px;
+  height: 48px;
+  background-color: var(--color-brand-1);
+  border: var(--color-brand-1);
+  color: var(--color-brand-2);
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btnEditUserConfirm:hover{
+  background-color: var(--color-hover-1);
+  border: 1px solid var(--color-hover-1);
+}
+
+
+
+
+/* deletar usuários */
+
+.userDeleteModal{
+  position: fixed;
+  width: 733px;
+  height: 292px;
+}
+
+.formModalDeleteUser{
+  position: relative;
+}
+
+.closeModalDeleteUser{
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-image: url(/src/asserts/img/closemodalUser.png);
+  border: none;
+  background-color: var(--color-brand-2);
+  cursor: pointer;
+  background-size: 100%;
+  width: 18px;
+  height: 18px;
+  background-repeat: no-repeat;
+  background-position: center;
+  max-width: 100%;
+}
+
+
+.deleteUserDiv{
+  display: flex;
+  flex-direction: column;
+  height: 292px;
+  justify-content: center;
+  align-items: center;
+  gap:40px;
+}
+
+.underline{
+  border-bottom: 2px solid var(--color-brand-1);
+}
+
+.btnDeleteUserConfirm{
+  font-size: 18px;
+  background-color: var(--color-brand-4);
+  width: 422px;
+  height: 48px;
+  color: var(--color-brand-2);
+  border: 1px solid var(--color-brand-4);
+  cursor: pointer;
+}
+
+.btnDeleteUserConfirm:hover{
+  background-color: var(--color-hover-3);
+  border: 1px solid var(--color-hover-3);
 }

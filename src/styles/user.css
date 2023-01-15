@@ -11,6 +11,15 @@
 
 }
 
+.modalityJob{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 300px;
+    gap: 100px;
+}
+
 #btnModalEdit{
     background-image: url("/src/asserts/img/lapisEdit.png");
     border: none;
@@ -117,6 +126,8 @@ input{
 }
 
 
+
+
 .informationCoWorkes{    
     display: flex;
     justify-content: center;
@@ -129,37 +140,89 @@ input{
     height: 467px;
     background-color: var(--color-gray-3);
     border: 1px solid var(--color-gray-4);
+    
+   
 }
 
 
-.departmentsInfoCard{
+
+
+.ulAllCoworkes{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 50px;
+    width: 1062px;
+    height: 254px;
+    max-width: 100%;
+    margin: 0 auto;
+
+
+    
+}
+
+.ulAllCoworkes > li {
+    display: flex;
+    flex-direction: column;
+    
+    align-items:flex-start;
+    border: 2px solid var(--color-brand-1);
+    width: 318px;
+    height: 76px;
+    max-width: 100%;
+    background-color: var(--color-brand-2);
+
+
+
+
+
+
+}
+.divInfoCoworkes{
+
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    width: 100%;
+    
+    height: 467px;
+    max-width: 100%;
+    
+
+
+}
+
+.divInfoCoworkes > h1{
     display: flex;
     justify-content: center;
     text-align: center;
     align-items: center;
-    margin-top: 44px;
-    background-color: var(--color-brand-1);
-    color: var(--color-brand-2);
-    width: 1178px;
+    width: 100%;
     max-width: 100%;
     height: 78px;
+    background-color: var(--color-brand-1);
     font-size: 32px;
     font-weight: 700;
-
-
-    
-}
-
-.coWorkesCard{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    width: 318px;
-    height: 76px;
+    color: var(--color-brand-2);
     border: 1px solid var(--color-brand-1);
 
-
-
-    
 }
+
+.ulAllCoworkes > li > div{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 24px;
+    gap: 10px;
+    
+    width: 200px;
+    height: 76px;
+
+}
+
+.ulAllCoworkes > li > div > h2{
+    margin-top: 5px;
+}
+
+
 

@@ -22,7 +22,7 @@ export async function login(data) {
 
 
   if (!loginData.ok) {
-    toast(loginDataJson.message, '#c20803')
+    toast('Usuário ou senha incorreto', '#c20803')
   } else {
     toast('Login realizado com sucesso', '#08c203')
     window.location.replace("/src/pages/dashboard.html");
@@ -33,7 +33,7 @@ export async function login(data) {
 
 export async function createUser(data) {
   const newUser = await fetch(`http://localhost:6278/auth/register`, {
-    method: "POST",
+    method: 'POST',
     headers: {
       "Content-Type": "application/json",
     },
@@ -43,9 +43,10 @@ export async function createUser(data) {
   const newUserJson = await newUser.json();
 
   if (!newUser.ok) {
-    toast(newUserJson.message, '#C20803')
+    toast('Usuário não cadastrado', '#C20803')
   } else {
     toast('Usuário cadastrado com sucesso', '#08C203')
+    window.location.replace('/src/pages/login.html')
   }
 
   return newUserJson;
@@ -64,8 +65,9 @@ export async function readProfile() {
 
   if (!loggedUser.ok) {
     toast(loggedUser.message, '#c20803')
-  }
 
+  }
+   
   return loggedUserJson;
 }
 
@@ -94,7 +96,7 @@ export async function updateProfile(data) {
   const updatedUserJson = await updatedUser.json();
 
   if (!updatedUser.ok) {
-    toast(updatedUserJson.message, '#c20803')
+    toast('O perfil não foi atualizado', '#c20803')
   } else {
     toast('Perfil atualizado', '#08c203')
   }
@@ -106,6 +108,10 @@ export async function deleteProfile(product_id) {
   const deletedUser = await fetch(`http://localhost:6278/admin/delete_user/${product_id}`,
     {
       method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
      
     }
   );
@@ -113,7 +119,7 @@ export async function deleteProfile(product_id) {
   const deletedUserJson = await deletedUser.json();
 
   if (!deletedUser.ok) {
-    toast(deletedUserJson.message, '#c20803')
+    toast('Erro ao deletar o usuário', '#c20803')
   } else {
     toast('Usuário deletado', '#08c203')
   }
@@ -133,7 +139,7 @@ export async function createProduct(data) {
   const newProductJson = await newProduct.json();
 
   if (!newProduct.ok) {
-    toast(newProductJson.message, '#c20803')
+    toast('O departamento não foi cadastrado', '#c20803')
   } else {
     toast('Departamento Cadastrado', '#08c203')
   }
@@ -230,7 +236,7 @@ export async function updatedUserById(data, product_id) {
 
   const updatedUserJson = await updateUser.json();
   if (!updateUser.ok) {
-    toast(updatedUserJson.message, '#c20803');
+    toast('O produto não foi atualizado', '#c20803');
   } else {
     toast("Produto atualizado", '#08c203');
   }
@@ -310,7 +316,7 @@ export async function deleteDepartmentById(product_id){
 
   const deleteDepartmentJson = await deleteDepartment.json()
   if (!deleteDepartment.ok) {
-    toast(deletedUserJson.message, '#c20803')
+    toast('O departamento não foi deletado', '#c20803')
   } else {
     toast('Departamento deletado', '#08c203')
   }
@@ -342,4 +348,52 @@ export async function updateDepartmentById(data, product_id){
   return editDepartmentJson
 
 
+}
+
+
+export async function hireUser(data){
+const newHire = await fetch(`http://localhost:6278/departments/hire/`,{
+  method: 'PATCH',
+  headers: {
+    "Content-Type": "application/json",
+    Authorization: `Bearer ${token}`,
+  },
+  body: JSON.stringify(data)
+
+})
+
+const newHireJson = await newHire.json()
+
+if(newHire.ok){
+  toast('Usuário Contratado', '#08c203')
+} else{
+  toast('O Usuário não foi contratado', '#c20803')
+}
+
+return newHireJson
+
+
+
+}
+
+
+
+export async function dismissUser(product_id){
+  const dismiss = await fetch(`http://localhost:6278/departments/dismiss/${product_id}`,{
+    method:'PATCH',
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${token}`,
+    },
+
+  })
+  const dismissJson = await dismiss.json()
+
+  if(dismiss.ok){
+    toast('O Usuário foi demitido', '#08c203')
+  } else{
+    toast ('O Usuário não foi demitido', '#c20803')
+  }
+
+  return dismissJson
 }

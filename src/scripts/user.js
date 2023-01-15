@@ -40,7 +40,7 @@ function closeModal() {
 
 async function youProfile() {
   const sectionUserProfile = document.querySelector(".usuario__editar");
-  const modailityJob = document.querySelector(`.modalityJob`);
+  const modailityJob = document.querySelector('.modalityJob');
   const readYouProfile = await readProfile();
 
   sectionUserProfile.insertAdjacentHTML(
@@ -57,15 +57,19 @@ async function youProfile() {
     modailityJob.insertAdjacentHTML(
       `beforeend`,
       `
+  <p>
   ${readYouProfile.kind_of_work}     
+  </p>
   `
     );
 
-    if (readYouProfile.department_uuid !== null) {
+    if (readYouProfile.professional_level
+      !== null) {
       modailityJob.insertAdjacentHTML(
         `beforeend`,
         `
-  ${readYouProfile.department_uuid}     
+  <p>${readYouProfile.professional_level}</p>
+       
   `
       );
     }
@@ -113,11 +117,12 @@ function logout() {
 }
 
 async function renderCoWorkers(){
-  const coWorkes = document.querySelector('.informationCoWorkes')
+  const coWorkes = document.querySelector('.divInfoCoworkes')
+  const ulAllCoworkes = document.querySelector('.ulAllCoworkes')
   const infoUserCompany = await companyDeparments()
   const coWorkesInfo = await employerrDepartment()
 
-  console.log(coWorkesInfo)
+
 
   if(infoUserCompany.error){
     coWorkes.insertAdjacentHTML('beforeend',`
@@ -125,14 +130,33 @@ async function renderCoWorkers(){
     <h1>${infoUserCompany.error}</h1>
     `)
   } else{
-    coWorkes.insertAdjacentHTML('beforeend',`
+
+
+   coWorkes.insertAdjacentHTML('afterbegin', `
+   <h1>
+
+   ${infoUserCompany.name}
+   </h1>
+   `)
+
+    coWorkesInfo.forEach(coworkes =>{      
+      coworkes.users.forEach(array =>{
+                ulAllCoworkes.insertAdjacentHTML('beforeend', `
+        <li>
+        <div>
+        <h2>${array.username}</h2>
+        <p>${array.professional_level}</p>
+        
+        </div>
+        </li>
+        
+        `)
+      })
+    })
     
-    <h1 class="departmentsInfoCard">${infoUserCompany.name} - ${infoUserCompany.departments.name}</h1>
-    <div class="coWorkesCard">
-    <h2>${coWorkesInfo.users.name}</h2>
-    <p>${coWorkesInfo.users.professional_level}</p>
-    </div>
-    `)
+    
+    
+    
 
   }
 }
